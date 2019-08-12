@@ -1,0 +1,189 @@
+/*
+#e6e6fa; body background color
+#ffffff; masthead heading color
+#030303; body default font color
+#000000; nav links hover color
+#b0e0e6; header background-color
+*/
+/* Core Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Lato');
+body {
+  margin: 0;
+  font-family: 'Roboto','arial',sans-serif;
+  color: #030303;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: left;
+  background-color: lavender;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  margin:0;
+  padding: 1em 3em;
+  font-family: 'Roboto Slab', serif;
+}
+
+p {
+  margin:0;
+  padding: 1em 1em;
+}
+
+header {
+  background-color: powderblue;
+}
+/* navbar styling */
+nav ul {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo {
+  margin: 0 auto;
+  display: inline;
+  height:100px;
+  width:100px;
+}
+
+nav ul li {
+  display: block;
+  padding: 2em 2em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: #fff;
+  padding: 1em 3em;
+  background-color: grey;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: black;
+}
+
+/*masthead with background image and tagline*/
+.masthead {
+  background: lightblue url('../img/masthead.jpeg') no-repeat fixed center;
+  background-size: cover;
+  height: 50vh;
+  color: #fff;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+}
+/*footer social links styling*/
+footer .social-icons {
+  display: inline;
+  text-align: left;
+}
+
+.social-icons a {
+ padding: 0 1em;
+}
+
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+  color: grey;
+  text-decoration: none;
+}
+
+@media only screen and (min-width:35rem) {
+
+  body{
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  header {
+    display: grid;
+    grid-template-areas: 'header';
+    background-color: powderblue;
+  }
+
+  /* navbar styling */
+  .logo {
+    display: block;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+  h1, h2{
+    text-align: center;
+  }
+  .container::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .container, footer{
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .article {
+    padding: 2em 2em;
+  }
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+
+  figure {
+    float: left;
+  }
+}
+
+@media only screen and (min-width:80rem) {
+
+  body {
+    font-size: 1.25rem;
+  }
+
+  h1, h2{
+    text-align: left;
+  }
+  .static {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  nav ul{
+    padding: 0px 1em;
+    display:inline-block;
+    vertical-align:top;
+  }
+
+  .logo {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .masthead h1 {
+    padding: 1em 5em;
+  }
+  .article {
+    display: grid;
+    padding: 2em 2em;
+    grid-template-columns: 40% 60%;
+  }
+
+  .grid-container {
+    grid-template-columns: auto auto auto;
+  }
+
+  .grid-item figure figcaption {
+    text-align: center;
+  }
+
+}
+
+
